@@ -1,4 +1,25 @@
-var bob=20
+var bob=20;
+var cursor=0;
+var grandma=0;
+var farm=0;
+var mine=0;
+var factory=0;
+var bank=0;
+var temple=0;
+var wizardTower=0;
+var shipment=0;
+var alchemyLab=0;
+var portal=0;
+var timeMachine=0;
+var antimatterCondenser=0;
+var prism=0;
+var chancemaker=0;
+var fractalEngine=0;
+var javascriptConsole=0;
+var idleverse=0;
+var cortexBaker=0;
+var you=0;
+var next=" "
 Game.registerMod('cookiebot',{
 
   init:function(){
@@ -14,6 +35,14 @@ Game.registerMod('cookiebot',{
   },
   gogo:function(){
     Game.ClickCookie()
+    cursor = Game.Objects['Cursor'].price/Game.Objects['Cursor'].cps
+    grandma = Game.Objects['Grandma'].price/Game.Objects['Grandma'].cps
+    farm = Game.Objects['Farm'].price/Game.Objects['Farm'].cps
+    mine = Game.Objects['Mine'].price/Game.Objects['Mine'].cps
+    factory = Game.Objects['Factory'].price/Game.Objects['Factory'].cps
+    bank = Game.Objects['Bank'].price/Game.Objects['Bank'].cps
+    
+    
   },
 
 });
