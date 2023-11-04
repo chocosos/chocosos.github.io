@@ -1,3 +1,4 @@
+var bob=69
 Game.registerMod('test mod',{
   /*
     what this example mod does:
@@ -25,5 +26,6 @@ Game.registerMod('test mod',{
     Game.playerIntro=text||choose(['oh snap, it\'s','watch out, it\'s','oh no! here comes','hide your cookies, for here comes','behold! it\'s']);
     if (!l('bakerySubtitle')) l('bakeryName').insertAdjacentHTML('afterend','<div id="bakerySubtitle" class="title" style="text-align:center;position:absolute;left:0px;right:0px;bottom:32px;font-size:12px;pointer-events:none;text-shadow:0px 1px 1px #000,0px 0px 4px #f00;opacity:0.8;"></div>');
     l('bakerySubtitle').textContent='~'+Game.playerIntro+'~';
+    bob++;
   },
 });
