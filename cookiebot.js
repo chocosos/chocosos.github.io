@@ -24,7 +24,7 @@ Game.registerMod('test mod',{
   },
   gogo:function(){
     bob++;
-  }
+  },
   addIntro:function(text){
     //note: this is not a mod hook, just a function that's part of the mod
     Game.playerIntro=text||choose(['oh snap, it\'s','watch out, it\'s','oh no! here comes','hide your cookies, for here comes','behold! it\'s']);
