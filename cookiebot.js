@@ -23,7 +23,7 @@ Game.registerMod('test mod',{
     if (data.text) Game.mods['test mod'].addIntro(data.text);
   },
   gogo:function(){
-    bob++;
+    Game.ClickCookie()
   },
   addIntro:function(text){
     //note: this is not a mod hook, just a function that's part of the mod
