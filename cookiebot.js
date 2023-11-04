@@ -1,4 +1,4 @@
-var bob=69
+var bob=20
 Game.registerMod('test mod',{
   /*
     what this example mod does:
