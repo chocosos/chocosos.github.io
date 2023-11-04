@@ -1,4 +1,4 @@
-var bob=10;
+var bob=69;
 bob++;
 
 Game.Loop=function()
