@@ -12,6 +12,7 @@ Game.registerMod('test mod',{
     Game.registerHook('check',function(){if (!Game.playerIntro){Game.mods['test mod'].addIntro();}});
     Game.registerHook('click',function(){Game.Notify(choose(['A good click.','A solid click.','A mediocre click.','An excellent click!']),'',0,0.5);});
     Game.registerHook('cps',function(cps){return cps*2;});
+    Game.registerHook('draw',function(){Game.mods['test mod'].gogo();});
   },
   save:function(){
     //note: we use stringified JSON for ease and clarity but you could store any type of string
@@ -21,6 +22,9 @@ Game.registerMod('test mod',{
     var data=JSON.parse(str);
     if (data.text) Game.mods['test mod'].addIntro(data.text);
   },
+  gogo:function(){
+    bob++;
+  }
   addIntro:function(text){
     //note: this is not a mod hook, just a function that's part of the mod
     Game.playerIntro=text||choose(['oh snap, it\'s','watch out, it\'s','oh no! here comes','hide your cookies, for here comes','behold! it\'s']);
