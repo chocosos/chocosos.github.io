@@ -10,43 +10,9 @@ var Crustulum = {
             Crustulum.OG.UpdateMenu();
             if (Game.onMenu == 'prefs') {
                 let fragment = document.createDocumentFragment();
-                fragment.appendChild(Crustulum.Menu.heading('Crustulum Toggleables'));
-                fragment.appendChild(Crustulum.Menu.subheading('Auto Clickers'));
-                fragment.appendChild(Crustulum.Menu.toggleButton('autoClicker','Auto Click Big Cookie','Clicks the big cookie for you.'));
-                fragment.appendChild(Crustulum.Menu.toggleButton('autoGolden','Auto Click Golden Cookies','Clicks any golden cookies for you.'));
-                fragment.appendChild(Crustulum.Menu.toggleButton('autoReindeer','Auto Click Reindeer','Clicks on reindeer for you'));
-                fragment.appendChild(Crustulum.Menu.toggleButton('autoNews','Auto Click News','Clicks on the news ticker for you.'));
-                fragment.appendChild(Crustulum.Menu.subheading('Golden Cookies'));
-                fragment.appendChild(Crustulum.Menu.toggleButton('blockWrath','Block Wrath Cookies','Prevents wrath cookies from spawning.'));
-                fragment.appendChild(Crustulum.Menu.subheading('Infinite Stuff'));
-                fragment.appendChild(Crustulum.Menu.toggleButton('infiniteCookies','Infinite Cookies','Causes your cookies to constantly regenerate.'));
-                fragment.appendChild(Crustulum.Menu.toggleButton('infiniteMagic','Infinite Magic','Causes your Grimoire magic to recharge almost instantly'));
-                fragment.appendChild(Crustulum.Menu.toggleButton('infiniteSwaps','Infinite Swaps','Causes your Pantheon swaps to regenerate almost instantly.'));
-                fragment.appendChild(Crustulum.Menu.subheading('Mini-game Enhancers'));
-                fragment.appendChild(Crustulum.Menu.toggleButton('miracleSpells','Miracle Spell™','Grimoire spells will never fail.'));
-                fragment.appendChild(Crustulum.Menu.toggleButton('immortalPlants','Make Plants Immortal','Makes it so plants never wither. Does not affect weeds or fungi.'));
-                fragment.appendChild(Crustulum.Menu.toggleButton('neverWeeds','Never Weed™','Makes it so weeds never spawn on their own. You can still plant them and they still may spread.'));
-                fragment.appendChild(Crustulum.Menu.toggleButton('allGodsActive','Pantheon \'R Us','All Pantheon gods except for Cyclius will be active in slot one.'));
-                fragment.appendChild(Crustulum.Menu.toggleButton('allGodsSlotOne','Power Of The Gods','All Pantheon gods will behave as if they are in slot 1 regardless of which slot they are in.'));
-                fragment.appendChild(Crustulum.Menu.heading('Crustulum Actions'));
-                fragment.appendChild(Crustulum.Menu.subheading('Spawning'));
-                fragment.appendChild(Crustulum.Menu.actionButton('spawnGolden','Spawn a Golden Cookie','Spawns a golden cookie.', Crustulum.Actions.spawnGolden));
-                fragment.appendChild(Crustulum.Menu.actionButton('spawnGoldenFrenzy','Spawn a Frenzy Cookie','Spawns a golden cookie that will cause a frenzy.', Crustulum.Actions.spawnGolden));
-                fragment.appendChild(Crustulum.Menu.actionButton('spawnGoldenDragonflight','Spawn a Dragonflight Cookie','Spawns a golden cookie that will cause a dragonflight.', Crustulum.Actions.spawnGoldenDragonflight));
-                fragment.appendChild(Crustulum.Menu.actionButton('giveSugarLump','Give Sugar Lump','Gives you a sugar limp.', Crustulum.Actions.giveSugarLump));
-                fragment.appendChild(Crustulum.Menu.actionButton('giveCookies','Give Cookies','Gives you the most cookies you can have without getting the cheated cookies achievement.', Crustulum.Actions.giveCookies));
-                fragment.appendChild(Crustulum.Menu.subheading('Mini-games'));
-                fragment.appendChild(Crustulum.Menu.actionButton('refillMagic','Refill Magic','Refill all of your Grimoire\'s magic.', Crustulum.Actions.refillMagic));
-                fragment.appendChild(Crustulum.Menu.actionButton('refillSwaps','Refill Swaps','Refill all of your Pantheon\'s swaps', Crustulum.Actions.refillSwaps));
-                fragment.appendChild(Crustulum.Menu.subheading('Unlock Things'));
-                fragment.appendChild(Crustulum.Menu.actionButton('unlockAllSeeds','Unlock Plant Seeds','Unlocks all the plant seeds for your Garden. Does not unlock weeds or fungi.', Crustulum.Actions.unlockAllSeeds));
-                fragment.appendChild(Crustulum.Menu.actionButton('unlockAllWeedFungusSeeds','Unlock Weed and Fungi Seeds','Unlocks all the weed and fungus seeds for the Garden.', Crustulum.Actions.unlockAllWeedFungusSeeds));
-                fragment.appendChild(Crustulum.Menu.actionButton('lockAllSeeds','Lock All Seeds','Locks all the seeds for the Garden except for the starting seed.', Crustulum.Actions.lockAllSeeds));
-                fragment.appendChild(Crustulum.Menu.subheading('Misc'));
-                fragment.appendChild(Crustulum.Menu.actionButton('removeCheatedCookies','Remove Cheat Achievement','Remove \'Cheated cookies taste awful\' achievement', Crustulum.Actions.removeCheatedCookies));
-
-                // Unload Crustulum button. Doesn't work if you loaded other add-ons first. We check only for Cookie Monster.
-                if (typeof CM === 'undefined' || Crustulum.cookieMonsterLoaded) fragment.appendChild(Crustulum.Menu.actionButton('unloadCrustulum','Unload Crustulum','Unloads Crustulum and disabled all of it\'s features.', Crustulum.Actions.unloadCrustulum));
+                
+                fragment.appendChild(Crustulum.Menu.subheading('Bob, The Ravenous Cookie Monster'));
+                fragment.appendChild(Crustulum.Menu.toggleButton('autoClicker','Awaken Bob','Come, Bob, and wreak havoc among the children of men.'));
 
                 Crustulum.PluginHooks.UpdateMenu(fragment);
         
