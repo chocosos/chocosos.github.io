@@ -1,4 +1,2 @@
-var bob=11
-while (7>1) {
-  Game.ClickCookie
-}
+var bob=10;
+bob++;
