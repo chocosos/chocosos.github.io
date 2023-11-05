@@ -48,6 +48,20 @@ Game.registerMod('cookiebot',{
     mine = Game.Objects['Mine'].price/Game.Objects['Mine'].storedCps
     factory = Game.Objects['Factory'].price/Game.Objects['Factory'].storedCps
     bank = Game.Objects['Bank'].price/Game.Objects['Bank'].storedCps
+    temple = Game.Objects['Temple'].price/Game.Objects['Temple'].storedCps
+    wizardTower = Game.Objects['Wizard tower'].price/Game.Objects['Wizard tower'].storedCps
+    shipment = Game.Objects['Shipment'].price/Game.Objects['Shipment'].storedCps
+    alchemyLab = Game.Objects['Alchemy lab'].price/Game.Objects['Alchemy lab'].storedCps
+    portal = Game.Objects['Portal'].price/Game.Objects['Portal'].storedCps
+    timeMachine = Game.Objects['Time machine'].price/Game.Objects['Time machine'].storedCps
+    antimatterCondenser = Game.Objects['Antimatter condenser'].price/Game.Objects['Antimatter condenser'].storedCps
+    prism = Game.Objects['Prism'].price/Game.Objects['Prism'].storedCps
+    chancemaker = Game.Objects['Chancemaker'].price/Game.Objects['Chancemaker'].storedCps
+    fractalEngine = Game.Objects['Fractal engine'].price/Game.Objects['Fractal engine'].storedCps
+    javascriptConsole = Game.Objects['Javascript console'].price/Game.Objects['Javascript console'].storedCps
+    idleverse = Game.Objects['Idleverse'].price/Game.Objects['Idleverse'].storedCps
+    cortexBaker = Game.Objects['Cortex baker'].price/Game.Objects['Cortex baker'].storedCps
+    you = Game.Objects['You'].price/Game.Objects['You'].storedCps
 
 
   },
