@@ -1,26 +1,26 @@
 
-    var bob=20;
-    var cursor=0;
-    var grandma=0;
-    var farm=0;
-    var mine=0;
-    var factory=0;
-    var bank=0;
-    var temple=0;
-    var wizardTower=0;
-    var shipment=0;
-    var alchemyLab=0;
-    var portal=0;
-    var timeMachine=0;
-    var antimatterCondenser=0;
-    var prism=0;
-    var chancemaker=0;
-    var fractalEngine=0;
-    var javascriptConsole=0;
-    var idleverse=0;
-    var cortexBaker=0;
-    var you=0;
-    var next=" "
+    let bob=20;
+    let cursor=0;
+    let grandma=0;
+    let farm=0;
+    let mine=0;
+    let factory=0;
+    let bank=0;
+    let temple=0;
+    let wizardTower=0;
+    let shipment=0;
+    let alchemyLab=0;
+    let portal=0;
+    let timeMachine=0;
+    let antimatterCondenser=0;
+    let prism=0;
+    let chancemaker=0;
+    let fractalEngine=0;
+    let javascriptConsole=0;
+    let idleverse=0;
+    let cortexBaker=0;
+    let you=0;
+    let next=" "
 
 Game.registerMod('cookiebot',{
 
@@ -39,15 +39,15 @@ Game.registerMod('cookiebot',{
 
 
   gogo:function(){
-    let bob=0
-    let cursor = Game.Objects['Cursor'].price/Game.Objects['Cursor'].storedCps
+    bob=0
+    cursor = Game.Objects['Cursor'].price/Game.Objects['Cursor'].storedCps
     Game.ClickCookie()
 
-    let grandma = Game.Objects['Grandma'].price/Game.Objects['Grandma'].storedCps
-    let farm = Game.Objects['Farm'].price/Game.Objects['Farm'].storedCps
-    let mine = Game.Objects['Mine'].price/Game.Objects['Mine'].storedCps
-    let factory = Game.Objects['Factory'].price/Game.Objects['Factory'].storedCps
-    let bank = Game.Objects['Bank'].price/Game.Objects['Bank'].storedCps
+    grandma = Game.Objects['Grandma'].price/Game.Objects['Grandma'].storedCps
+    farm = Game.Objects['Farm'].price/Game.Objects['Farm'].storedCps
+    mine = Game.Objects['Mine'].price/Game.Objects['Mine'].storedCps
+    factory = Game.Objects['Factory'].price/Game.Objects['Factory'].storedCps
+    bank = Game.Objects['Bank'].price/Game.Objects['Bank'].storedCps
 
 
   },
