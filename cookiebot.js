@@ -21,7 +21,7 @@ let idleverse=0;
 let cortexBaker=0;
 let you=0;
 let next=" ";
-let best=0
+let best=9999999999999999999999999999999999999999999999
 
     const things = [];
 Game.registerMod('cookiebot',{
