@@ -46,9 +46,13 @@ Game.registerMod('cookiebot',{
         
         Game.ClickCookie()
     
-        cursor = Game.Objects['Cursor'].price/Game.Objects['Cursor'].storedCps
-        things.push(Game.Objects['Cursor'])
-        grandma = Game.Objects['Grandma'].price/Game.Objects['Grandma'].storedCps
+        if (Game.Objects['Cursor'].price/Game.Objects['Cursor'].storedCps < best){
+            best=Game.Objects['Cursor']
+        }
+        
+        if (Game.Objects['Grandma'].price/Game.Objects['Grandma'].storedCps < best){
+            best=Game.Objects['Cursor']
+        }
         things.push(Game.Objects['Grandma'])
         farm = Game.Objects['Farm'].price/Game.Objects['Farm'].storedCps
         things.push(Game.Objects['Farm'])
@@ -86,10 +90,7 @@ Game.registerMod('cookiebot',{
         things.push(Game.Objects['Cortex baker'])
         you = Game.Objects['You'].price/Game.Objects['You'].storedCps
         things.push(Game.Objects['You'])
-        for (let i = 0; i<thing.length; i++){
-            if (things[i].price/things[i].storedCps<best){
-                best=things[i]
-            }
+
         if (Game.Cookies>best.price){
             best.buy()
         }
