@@ -49,7 +49,7 @@ Game.registerMod('cookiebot',{
     
         if (Game.Objects['Cursor'].price/Game.Objects['Cursor'].storedCps < bestCost){
             bestObj=Game.Objects['Cursor'];
-            bestCost=Game.Objects['Cursor'].price/Game.Objects['Cursor'].storedCps
+            bestCost=Game.Objects['Cursor'].price/Game.Objects['Cursor'].storedCps;
         };
         
         if (Game.Objects['Grandma'].price/Game.Objects['Grandma'].storedCps < bestCost){
@@ -66,6 +66,13 @@ Game.registerMod('cookiebot',{
             bestObj=Game.Objects['Mine'];
             bestCost=Game.Objects['Mine'].price/Game.Objects['Mine'].storedCps;
         };
+
+
+
+
+
+
+      
         /*
         factory = Game.Objects['Factory'].price/Game.Objects['Factory'].storedCps;
         things.push(Game.Objects['Factory']);
@@ -102,6 +109,7 @@ Game.registerMod('cookiebot',{
         */
         if (Game.cookies>bestObj.price){
             bestObj.buy(1);
+            
         }
         
         
