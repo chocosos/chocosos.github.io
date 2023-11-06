@@ -21,7 +21,8 @@ let idleverse=0;
 let cortexBaker=0;
 let you=0;
 let next=" ";
-let best=9999999999999999999999999999999999999999999999
+let bestCost=9999999999999999999999999999999999999999999999;
+var bestObj;
 
     const things = [];
 Game.registerMod('cookiebot',{
@@ -42,61 +43,65 @@ Game.registerMod('cookiebot',{
 
   gogo:function(){
       
-        bob=0
+        bob=0;
         
-        Game.ClickCookie()
+        Game.ClickCookie();
     
-        if (Game.Objects['Cursor'].price/Game.Objects['Cursor'].storedCps < best){
-            best=Game.Objects['Cursor']
-        }
+        if (Game.Objects['Cursor'].price/Game.Objects['Cursor'].storedCps < bestCost){
+            bestObj=Game.Objects['Cursor'];
+            bestCost=Game.Objects['Cursor'].price/Game.Objects['Cursor'].storedCps
+        };
         
-        if (Game.Objects['Grandma'].price/Game.Objects['Grandma'].storedCps < best){
-            best=Game.Objects['Grandma']
-        }
+        if (Game.Objects['Grandma'].price/Game.Objects['Grandma'].storedCps < bestCost){
+            bestObj=Game.Objects['Grandma'];
+            bestCost=Game.Objects['Grandma'].price/Game.Objects['Grandma'].storedCps;
+        };
         
-        if (Game.Objects['Farm'].price/Game.Objects['Farm'].storedCps < best){
-            best=Game.Objects['Farm']
-        }
+        if (Game.Objects['Farm'].price/Game.Objects['Farm'].storedCps < bestCost){
+            bestObj=Game.Objects['Farm'];
+            bestCost=Game.Objects['Farm'].price/Game.Objects['Farm'].storedCps;
+        };
         
-        if (Game.Objects['Mine'].price/Game.Objects['Mine'].storedCps < best){
-            best=Game.Objects['Mine']
-        }
+        if (Game.Objects['Mine'].price/Game.Objects['Mine'].storedCps < bestCost){
+            bestObj=Game.Objects['Mine'];
+            bestCost=Game.Objects['Mine'].price/Game.Objects['Mine'].storedCps;
+        };
         
-        factory = Game.Objects['Factory'].price/Game.Objects['Factory'].storedCps
-        things.push(Game.Objects['Factory'])
-        bank = Game.Objects['Bank'].price/Game.Objects['Bank'].storedCps
-        things.push(Game.Objects['Bank'])
-        temple = Game.Objects['Temple'].price/Game.Objects['Temple'].storedCps
-        things.push(Game.Objects['Temple'])
-        wizardTower = Game.Objects['Wizard tower'].price/Game.Objects['Wizard tower'].storedCps
-        things.push(Game.Objects['Wizard tower'])
-        shipment = Game.Objects['Shipment'].price/Game.Objects['Shipment'].storedCps
-        things.push(Game.Objects['Shipment'])
-        alchemyLab = Game.Objects['Alchemy lab'].price/Game.Objects['Alchemy lab'].storedCps
-        things.push(Game.Objects['Alchemy lab'])
-        portal = Game.Objects['Portal'].price/Game.Objects['Portal'].storedCps
-        things.push(Game.Objects['Portal'])
-        timeMachine = Game.Objects['Time machine'].price/Game.Objects['Time machine'].storedCps
-        things.push(Game.Objects['Time machine'])
-        antimatterCondenser = Game.Objects['Antimatter condenser'].price/Game.Objects['Antimatter condenser'].storedCps
-        things.push(Game.Objects['Antimatter condenser'])
-        prism = Game.Objects['Prism'].price/Game.Objects['Prism'].storedCps
-        things.push(Game.Objects['Prism'])
-        chancemaker = Game.Objects['Chancemaker'].price/Game.Objects['Chancemaker'].storedCps
-        things.push(Game.Objects['Chancemaker'])
-        fractalEngine = Game.Objects['Fractal engine'].price/Game.Objects['Fractal engine'].storedCps
-        things.push(Game.Objects['Fractal engine'])
-        javascriptConsole = Game.Objects['Javascript console'].price/Game.Objects['Javascript console'].storedCps
-        things.push(Game.Objects['Javascript console'])
-        idleverse = Game.Objects['Idleverse'].price/Game.Objects['Idleverse'].storedCps
-        things.push(Game.Objects['Idleverse'])
-        cortexBaker = Game.Objects['Cortex baker'].price/Game.Objects['Cortex baker'].storedCps
-        things.push(Game.Objects['Cortex baker'])
-        you = Game.Objects['You'].price/Game.Objects['You'].storedCps
-        things.push(Game.Objects['You'])
+        factory = Game.Objects['Factory'].price/Game.Objects['Factory'].storedCps;
+        things.push(Game.Objects['Factory']);
+        bank = Game.Objects['Bank'].price/Game.Objects['Bank'].storedCps;
+        things.push(Game.Objects['Bank']);
+        temple = Game.Objects['Temple'].price/Game.Objects['Temple'].storedCps;
+        things.push(Game.Objects['Temple']);
+        wizardTower = Game.Objects['Wizard tower'].price/Game.Objects['Wizard tower'].storedCps;
+        things.push(Game.Objects['Wizard tower']);
+        shipment = Game.Objects['Shipment'].price/Game.Objects['Shipment'].storedCps;
+        things.push(Game.Objects['Shipment']);
+        alchemyLab = Game.Objects['Alchemy lab'].price/Game.Objects['Alchemy lab'].storedCps;
+        things.push(Game.Objects['Alchemy lab']);
+        portal = Game.Objects['Portal'].price/Game.Objects['Portal'].storedCps;
+        things.push(Game.Objects['Portal']);
+        timeMachine = Game.Objects['Time machine'].price/Game.Objects['Time machine'].storedCps;
+        things.push(Game.Objects['Time machine']);
+        antimatterCondenser = Game.Objects['Antimatter condenser'].price/Game.Objects['Antimatter condenser'].storedCps;
+        things.push(Game.Objects['Antimatter condenser']);
+        prism = Game.Objects['Prism'].price/Game.Objects['Prism'].storedCps;
+        things.push(Game.Objects['Prism']);
+        chancemaker = Game.Objects['Chancemaker'].price/Game.Objects['Chancemaker'].storedCps;
+        things.push(Game.Objects['Chancemaker']);
+        fractalEngine = Game.Objects['Fractal engine'].price/Game.Objects['Fractal engine'].storedCps;
+        things.push(Game.Objects['Fractal engine']);
+        javascriptConsole = Game.Objects['Javascript console'].price/Game.Objects['Javascript console'].storedCps;
+        things.push(Game.Objects['Javascript console']);
+        idleverse = Game.Objects['Idleverse'].price/Game.Objects['Idleverse'].storedCps;
+        things.push(Game.Objects['Idleverse']);
+        cortexBaker = Game.Objects['Cortex baker'].price/Game.Objects['Cortex baker'].storedCps;
+        things.push(Game.Objects['Cortex baker']);
+        you = Game.Objects['You'].price/Game.Objects['You'].storedCps;
+        things.push(Game.Objects['You']);
 
-        if (Game.Cookies>best.price){
-            best.buy()
+        if (Game.cookies>best.price){
+            best.buy(1);
         }
         
         
