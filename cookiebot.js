@@ -47,49 +47,53 @@ Game.registerMod('cookiebot',{
         Game.ClickCookie()
     
         cursor = Game.Objects['Cursor'].price/Game.Objects['Cursor'].storedCps
-        things.push(cursor)
+        things.push(Game.Objects['Cursor'])
         grandma = Game.Objects['Grandma'].price/Game.Objects['Grandma'].storedCps
-        things.push(grandma)
+        things.push(Game.Objects['Grandma'])
         farm = Game.Objects['Farm'].price/Game.Objects['Farm'].storedCps
-        things.push(farm)
+        things.push(Game.Objects['Farm'])
         mine = Game.Objects['Mine'].price/Game.Objects['Mine'].storedCps
-        things.push(mine)
+        things.push(Game.Objects['Mine'])
         factory = Game.Objects['Factory'].price/Game.Objects['Factory'].storedCps
-        things.push(factory)
+        things.push(Game.Objects['Factory'])
         bank = Game.Objects['Bank'].price/Game.Objects['Bank'].storedCps
-        things.push(bank)
+        things.push(Game.Objects['Bank'])
         temple = Game.Objects['Temple'].price/Game.Objects['Temple'].storedCps
-        things.push(temple)
+        things.push(Game.Objects['Temple'])
         wizardTower = Game.Objects['Wizard tower'].price/Game.Objects['Wizard tower'].storedCps
-        things.push(wizardTower)
+        things.push(Game.Objects['Wizard tower'])
         shipment = Game.Objects['Shipment'].price/Game.Objects['Shipment'].storedCps
-        things.push(shipment)
+        things.push(Game.Objects['Shipment'])
         alchemyLab = Game.Objects['Alchemy lab'].price/Game.Objects['Alchemy lab'].storedCps
-        things.push(alchemyLab)
+        things.push(Game.Objects['Alchemy lab'])
         portal = Game.Objects['Portal'].price/Game.Objects['Portal'].storedCps
-        things.push(portal)
+        things.push(Game.Objects['Portal'])
         timeMachine = Game.Objects['Time machine'].price/Game.Objects['Time machine'].storedCps
-        things.push(timeMachine)
+        things.push(Game.Objects['Time machine'])
         antimatterCondenser = Game.Objects['Antimatter condenser'].price/Game.Objects['Antimatter condenser'].storedCps
-        things.push(antimatterCondenser)
+        things.push(Game.Objects['Antimatter condenser'])
         prism = Game.Objects['Prism'].price/Game.Objects['Prism'].storedCps
-        things.push(prism)
+        things.push(Game.Objects['Prism'])
         chancemaker = Game.Objects['Chancemaker'].price/Game.Objects['Chancemaker'].storedCps
-        things.push(chancemaker)
+        things.push(Game.Objects['Chancemaker'])
         fractalEngine = Game.Objects['Fractal engine'].price/Game.Objects['Fractal engine'].storedCps
-        things.push(fractalEngine)
+        things.push(Game.Objects['Fractal engine'])
         javascriptConsole = Game.Objects['Javascript console'].price/Game.Objects['Javascript console'].storedCps
-        things.push(javascriptConsole)
+        things.push(Game.Objects['Javascript console'])
         idleverse = Game.Objects['Idleverse'].price/Game.Objects['Idleverse'].storedCps
-        things.push(idleverse)
+        things.push(Game.Objects['Idleverse'])
         cortexBaker = Game.Objects['Cortex baker'].price/Game.Objects['Cortex baker'].storedCps
-        things.push(cortexBaker)
+        things.push(Game.Objects['Cortex baker'])
         you = Game.Objects['You'].price/Game.Objects['You'].storedCps
-        things.push(you)
+        things.push(Game.Objects['You'])
         for (let i = 0; i<thing.length; i++){
-            if (things[i]<best){
+            if (things[i].price/things[i].storedCps<best){
                 best=things[i]
             }
+        if (Game.Cookies>best.price){
+            best.buy()
+        }
+        
         }
 
   },
