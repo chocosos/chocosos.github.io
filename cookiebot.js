@@ -1,26 +1,28 @@
 
-    let bob=20;
-    let cursor=0;
-    let grandma=0;
-    let farm=0;
-    let mine=0;
-    let factory=0;
-    let bank=0;
-    let temple=0;
-    let wizardTower=0;
-    let shipment=0;
-    let alchemyLab=0;
-    let portal=0;
-    let timeMachine=0;
-    let antimatterCondenser=0;
-    let prism=0;
-    let chancemaker=0;
-    let fractalEngine=0;
-    let javascriptConsole=0;
-    let idleverse=0;
-    let cortexBaker=0;
-    let you=0;
-    let next=" ";
+let bob=20;
+let cursor=0;
+let grandma=0;
+let farm=0;
+let mine=0;
+let factory=0;
+let bank=0;
+let temple=0;
+let wizardTower=0;
+let shipment=0;
+let alchemyLab=0;
+let portal=0;
+let timeMachine=0;
+let antimatterCondenser=0;
+let prism=0;
+let chancemaker=0;
+let fractalEngine=0;
+let javascriptConsole=0;
+let idleverse=0;
+let cortexBaker=0;
+let you=0;
+let next=" ";
+let best=0
+
     const things = [];
 Game.registerMod('cookiebot',{
 
@@ -84,7 +86,11 @@ Game.registerMod('cookiebot',{
         things.push(cortexBaker)
         you = Game.Objects['You'].price/Game.Objects['You'].storedCps
         things.push(you)
-        
+        for (let i = 0; i<thing.length; i++){
+            if (things[i]<best){
+                best=things[i]
+            }
+        }
 
   },
 
