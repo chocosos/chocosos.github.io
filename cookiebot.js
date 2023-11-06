@@ -100,7 +100,7 @@ Game.registerMod('cookiebot',{
         you = Game.Objects['You'].price/Game.Objects['You'].storedCps;
         things.push(Game.Objects['You']);
 
-        if (Game.cookies>best.price){
+        if (Game.cookies>bestObj.price){
             best.buy(1);
         }
         
