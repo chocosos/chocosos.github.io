@@ -107,10 +107,14 @@ Game.registerMod('cookiebot',{
         you = Game.Objects['You'].price/Game.Objects['You'].storedCps;
         things.push(Game.Objects['You']);
         */
-        if (Game.cookies>bestObj.price){
-            bestObj.buy(1);
+        Game.UpgradesInStore[0].buy()
+        bestObj.buy(1);
+        Game.shimmers.forEach(function(shimmer) {
             
-        }
+            if (shimmer.type == "golden") { shimmer.pop() }
+        })
+            
+        
         
         
 
