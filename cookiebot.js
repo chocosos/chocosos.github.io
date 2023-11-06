@@ -51,13 +51,17 @@ Game.registerMod('cookiebot',{
         }
         
         if (Game.Objects['Grandma'].price/Game.Objects['Grandma'].storedCps < best){
-            best=Game.Objects['Cursor']
+            best=Game.Objects['Grandma']
         }
-        things.push(Game.Objects['Grandma'])
-        farm = Game.Objects['Farm'].price/Game.Objects['Farm'].storedCps
-        things.push(Game.Objects['Farm'])
-        mine = Game.Objects['Mine'].price/Game.Objects['Mine'].storedCps
-        things.push(Game.Objects['Mine'])
+        
+        if (Game.Objects['Farm'].price/Game.Objects['Farm'].storedCps < best){
+            best=Game.Objects['Farm']
+        }
+        
+        if (Game.Objects['Mine'].price/Game.Objects['Mine'].storedCps < best){
+            best=Game.Objects['Mine']
+        }
+        
         factory = Game.Objects['Factory'].price/Game.Objects['Factory'].storedCps
         things.push(Game.Objects['Factory'])
         bank = Game.Objects['Bank'].price/Game.Objects['Bank'].storedCps
@@ -95,7 +99,7 @@ Game.registerMod('cookiebot',{
             best.buy()
         }
         
-        }
+        
 
   },
 
