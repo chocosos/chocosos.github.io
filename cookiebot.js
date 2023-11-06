@@ -66,7 +66,7 @@ Game.registerMod('cookiebot',{
             bestObj=Game.Objects['Mine'];
             bestCost=Game.Objects['Mine'].price/Game.Objects['Mine'].storedCps;
         };
-        
+        /*
         factory = Game.Objects['Factory'].price/Game.Objects['Factory'].storedCps;
         things.push(Game.Objects['Factory']);
         bank = Game.Objects['Bank'].price/Game.Objects['Bank'].storedCps;
@@ -99,9 +99,9 @@ Game.registerMod('cookiebot',{
         things.push(Game.Objects['Cortex baker']);
         you = Game.Objects['You'].price/Game.Objects['You'].storedCps;
         things.push(Game.Objects['You']);
-
+        */
         if (Game.cookies>bestObj.price){
-            best.buy(1);
+            bestObj.buy(1);
         }
         
         
