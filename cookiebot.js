@@ -70,11 +70,14 @@ Game.registerMod('cookiebot',{
         things.push(Game.Objects['You'])
         for (let i=0;i<things.length;i++){
             if (things[i].price/things[i].storedCps<bestCost){
-                bestCost=things[i].price/things[i].storedCps
-                bestObj=things[i]
+                bestCost=things[i].price/things[i].storedCps;
+                bestObj=things[i];
             }
         }
-        Game.UpgradesInStore[0].buy()
+        if (Game.UpgradesInStore.length>0){
+            Game.UpgradesInStore[0].buy()
+        }
+        
         bestObj.buy(1);
         Game.shimmers.forEach(function(shimmer) {
             
