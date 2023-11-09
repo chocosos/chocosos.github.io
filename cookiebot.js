@@ -68,17 +68,19 @@ Game.registerMod('cookiebot',{
         things.push(Game.Objects['Idleverse'])
         things.push(Game.Objects['Cortex baker'])
         things.push(Game.Objects['You'])
-        for (let i=0;i<things.length;i++){
-            if (things[i].price/things[i].storedCps<bestCost){
-                bestCost=things[i].price/things[i].storedCps;
+        i=0
+        for (i=0;i<things.length;i++){
+            if (things[i].bulkPrice/things[i].storedCps<bestCost){
+                bestCost=things[i].bulkPrice/things[i].storedCps;
                 bestObj=things[i];
+                
             }
         }
         if (Game.UpgradesInStore.length>0){
             Game.UpgradesInStore[0].buy()
         }
+        //bestObj.buy(1)
         
-        bestObj.buy(1);
         Game.shimmers.forEach(function(shimmer) {
             
             if (shimmer.type == "golden") { shimmer.pop() }
