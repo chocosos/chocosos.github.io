@@ -21,10 +21,32 @@ let idleverse=0;
 let cortexBaker=0;
 let you=0;
 let next=" ";
-let bestCost=9999999999999999999999999999999999999999999999;
+var orig;
+let bestCost=9999999999999999999999999999999999999999999999999999;
 var bestObj;
+let q =0;
 
-    const things = [];
+const things = [];
+things.push(Game.Objects['Cursor'])
+things.push(Game.Objects['Grandma'])
+things.push(Game.Objects['Farm'])
+things.push(Game.Objects['Mine'])
+things.push(Game.Objects['Factory'])
+things.push(Game.Objects['Bank'])
+things.push(Game.Objects['Temple'])
+things.push(Game.Objects['Wizard tower'])
+things.push(Game.Objects['Shipment'])
+things.push(Game.Objects['Alchemy lab'])
+things.push(Game.Objects['Portal'])
+things.push(Game.Objects['Time machine'])
+things.push(Game.Objects['Antimatter condenser'])
+things.push(Game.Objects['Prism'])
+things.push(Game.Objects['Chancemaker'])
+things.push(Game.Objects['Fractal engine'])
+things.push(Game.Objects['Javascript console'])
+things.push(Game.Objects['Idleverse'])
+things.push(Game.Objects['Cortex baker'])
+things.push(Game.Objects['You'])
 Game.registerMod('cookiebot',{
 
   init:function(){
@@ -47,39 +69,32 @@ Game.registerMod('cookiebot',{
         
         Game.ClickCookie();
 
-  
-        things.push(Game.Objects['Cursor'])
-        things.push(Game.Objects['Grandma'])
-        things.push(Game.Objects['Farm'])
-        things.push(Game.Objects['Mine'])
-        things.push(Game.Objects['Factory'])
-        things.push(Game.Objects['Bank'])
-        things.push(Game.Objects['Temple'])
-        things.push(Game.Objects['Wizard tower'])
-        things.push(Game.Objects['Shipment'])
-        things.push(Game.Objects['Alchemy lab'])
-        things.push(Game.Objects['Portal'])
-        things.push(Game.Objects['Time machine'])
-        things.push(Game.Objects['Antimatter condenser'])
-        things.push(Game.Objects['Prism'])
-        things.push(Game.Objects['Chancemaker'])
-        things.push(Game.Objects['Fractal engine'])
-        things.push(Game.Objects['Javascript console'])
-        things.push(Game.Objects['Idleverse'])
-        things.push(Game.Objects['Cortex baker'])
-        things.push(Game.Objects['You'])
-        i=0
-        for (i=0;i<things.length;i++){
-            if (things[i].bulkPrice/things[i].storedCps<bestCost){
-                bestCost=things[i].bulkPrice/things[i].storedCps;
+  q++
+
+        if (q>19){
+            q=0
+        }
+        
+            
+            if (things[i].getSumPrice(1)/things[i].storedCps<bestCost){
+                bestCost=things[i].getSumPrice(1)/things[i].storedCps;
                 bestObj=things[i];
                 
             }
-        }
+            
+        
+      
+            if (bestObj!=orig){
+                console.log("Change")
+            }
+                orig=bestObj
         if (Game.UpgradesInStore.length>0){
             Game.UpgradesInStore[0].buy()
         }
-        //bestObj.buy(1)
+      if (Game.cookies>bestObj.price){
+          bestObj.buy(1)
+      }
+        
         
         Game.shimmers.forEach(function(shimmer) {
             
